@@ -27,6 +27,7 @@ This section outlines the components of CUDA memory analysis and what to look fo
 - **What to Look For:**
   - Frequent cache hits or misses: Frequent hits suggest efficient memory reuse, while frequent misses may indicate that the cache is not being utilized effectively.
   - Large cache allocations: If there are large allocations in the cache, it might impact the efficiency of the cache.
+![Active Cache Timeline](FLAME1-2D-Runs/RUN3-CUDA-ELU/ActiveCachedTimeline.png "FLAME1-ELU-Cache")
 
 ### Active Memory Timeline
 
@@ -36,6 +37,7 @@ This section outlines the components of CUDA memory analysis and what to look fo
   - Memory growth: Look for patterns of memory growth over time. Sudden spikes in memory usage might indicate a memory leak or inefficient memory management.
   - Frequent allocations and deallocations: Excessive allocations and deallocations may lead to memory fragmentation, which can impact overall performance.
   - Unusual patterns: Identify any unusual patterns or spikes in memory usage that might indicate unexpected behavior in your code.
+![Active Memory Timeline](FLAME1-2D-Runs/RUN3-CUDA-ELU/ActiveMemory.png "FLAME1-ELU-Memory")
 
 ### Allocator State History
 
@@ -45,6 +47,7 @@ This section outlines the components of CUDA memory analysis and what to look fo
   - Leaked allocations: Identify any allocations that are not followed by deallocations. These could be indicative of memory leaks.
   - Frequent reallocations: Excessive reallocations may indicate inefficient use of memory, potentially impacting performance.
   - Allocation patterns: Understand the allocation patterns to optimize memory usage. For example, reusing existing memory instead of frequently allocating new memory can be more efficient.
+![Allocator State History](FLAME1-2D-Runs/RUN3-CUDA-ELU/AllocatorStateHistory.png "FLAME1-ELU-Allocator-State")
 
 ## C++ CUDA Optimizer for Inference and Quantization
 
